@@ -1662,8 +1662,8 @@ public class BinaryJedis implements BinaryJedisCommands {
         client.disconnect();
     }
 
-    public String watch(final byte[] key) {
-        client.watch(key);
+    public String watch(final byte[]... keys) {
+        client.watch(keys);
         return client.getStatusCodeReply();
     }
 
